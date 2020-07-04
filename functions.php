@@ -36,8 +36,6 @@ add_action('after_setup_theme', 'gp_init');
 
 
 
-
-
 // this removes the "Archive" word from the archive title in the archive page
 add_filter('get_the_archive_title',function($title){
   if(is_category()){$title=single_cat_title('',false);
@@ -65,16 +63,10 @@ function excerpt($charNumber){
 
 
 
-
-
-
-
-
-
  function register_menus() {
-   // register_nav_menu('navBar',__( 'Header' ));
-   // register_nav_menu('navBarMobile',__( 'Header Mobile' ));
-   // register_nav_menu('contactMenu',__( 'Contact Menu' ));
+   register_nav_menu('nav-bar',__( 'Header Desktop' ));
+   register_nav_menu('nav-bar-mobile',__( 'Header Mobile' ));
+   register_nav_menu('footer-menu',__( 'Footer Menu' ));
    // add_post_type_support( 'page', 'excerpt' );
  }
  add_action( 'init', 'register_menus' );
