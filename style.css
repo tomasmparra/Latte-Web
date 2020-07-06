@@ -430,6 +430,8 @@ h5, p {font-size: 16px;}
 
 .front_page_ATF {
   grid-template-columns: 1fr 1fr;
+  background-image: linear-gradient(to right bottom, #eeeeee, #ffffff);
+  background-attachment: fixed;
 }
 
 
